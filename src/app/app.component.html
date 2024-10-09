@@ -1,0 +1,60 @@
+<main class="main">
+  <div class="container">
+    <h1>Introduction Forms</h1>
+    <div class="form-container">
+      <form (ngSubmit)="isEditing ? editIntroduction() : addIntroduction()" #introductionForm="ngForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" [(ngModel)]="currentIntroduction.name" name="name" #name="ngModel" required>
+          <div *ngIf="name.invalid && name.touched" class="error">Name is required</div>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" [(ngModel)]="currentIntroduction.age" name="age" #age="ngModel" required>
+          <div *ngIf="age.invalid && age.touched" class="error">Age is required</div>
+        </div>
+        <div class="form-group">
+          <label for="hobby">Hobby</label>
+          <input type="text" id="hobby" [(ngModel)]="currentIntroduction.hobby" name="hobby" #hobby="ngModel" required>
+          <div *ngIf="hobby.invalid && hobby.touched" class="error">Hobby is required</div>
+        </div>
+        <div class="form-group">
+          <label for="favouriteFood">Favourite Food</label>
+          <input type="text" id="favouriteFood" [(ngModel)]="currentIntroduction.favouriteFood" name="favouriteFood" #favouriteFood="ngModel" required>
+          <div *ngIf="favouriteFood.invalid && favouriteFood.touched" class="error">Favourite Food is required</div>
+        </div>
+        
+        <div class="button-group">
+          <button type="submit" [disabled]="introductionForm.invalid" *ngIf="!isEditing" class="btn btn-add">Add</button>
+          <button type="submit" [disabled]="introductionForm.invalid" *ngIf="isEditing" class="btn btn-edit">Edit</button>
+          <button type="button" *ngIf="isEditing" (click)="deleteIntroduction()" class="btn btn-delete">Delete</button>
+        </div>
+      </form>
+    </div>
+    <!-- Table Container -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Hobby</th>
+            <th>Favourite Food</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let intro of introductions" (click)="selectIntroduction(intro)">
+            <td>{{intro.id | number:'3.0'}}</td>
+            <td>{{intro.name}}</td>
+            <td>{{intro.age}}</td>
+            <td>{{intro.hobby}}</td>
+            <td>{{intro.favouriteFood}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-refresh" (click)="loadIntroductions()">Refresh</button>
+    </div>
+  </div>
+</main>
+<router-outlet />
