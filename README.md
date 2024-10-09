@@ -12,7 +12,6 @@ To run this project, ensure that you have the following installed on your machin
   npm install -g @angular/cli
 
 
-Information on Angular:
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
