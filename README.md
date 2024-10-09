@@ -1,6 +1,6 @@
 # Introduction Forms Project
 
-This project is a simple web application that allows users to submit, edit, and delete their introductions, which includes their name, age, hobby, and favorite food. The frontend is built using Angular, while the backend is built using Node.js and Express.js.
+This project is a simple web application that allows users to submit, edit, and delete their introductions, which includes their name, age, hobby, and favorite food. The frontend is built using Angular, while the backend is built using Node.js and Express.js. ; REST APIs tested with Postman.
 
 ## Prerequisites
 
