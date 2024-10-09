@@ -1,7 +1,18 @@
-# AngularApp
+# Introduction Forms Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.10.
+This project is a simple web application that allows users to submit, edit, and delete their introductions, which includes their name, age, hobby, and favorite food. The frontend is built using Angular, while the backend is built using Node.js and Express.js.
 
+## Prerequisites
+
+To run this project, ensure that you have the following installed on your machine:
+
+- **Node.js**: [Download and install Node.js](https://nodejs.org/)
+- **Angular CLI**: You can install Angular CLI globally using npm:
+  ```bash
+  npm install -g @angular/cli
+
+
+Information on Angular:
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
